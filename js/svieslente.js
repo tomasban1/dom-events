@@ -24,13 +24,13 @@ function plusOne() {
 }
 function plusTwo() {
     total += 2;
-    suv = `<p>Team1 +2</p>`;
+    suv = `<p>&bull; Team1 +2</p>`;
     team1Dom.textContent = total;
     suvDom.innerHTML += suv;
 }
 function plusThree() {
     total += 3;
-    suv = `<p>Team1 +3</p>`;
+    suv = `<p>&bull; Team1 +3</p>`;
     team1Dom.textContent = total;
     suvDom.innerHTML += suv;
 }
@@ -40,19 +40,19 @@ let suv2 = '';
 
 function plusOneTeam2() {
     total2++;
-    suv2 = `<p>Team2 +1</p>`;
+    suv2 = `<p>&bull; Team2 +1</p>`;
     team2Dom.textContent = total2;
     suvDom.innerHTML += suv2;
 }
 function plusTwoTeam2() {
     total2 += 2;
-    suv2 = `<p>Team2 +2</p>`;
+    suv2 = `<p>&bull; Team2 +2</p>`;
     team2Dom.textContent = total2;
     suvDom.innerHTML += suv2;
 }
 function plusThreeTeam2() {
     total2 += 3;
-    suv2 = `<p>Team2 +3</p>`;
+    suv2 = `<p>&bull; Team2 +3</p>`;
     team2Dom.textContent = total2;
     suvDom.innerHTML += suv2;
 }
