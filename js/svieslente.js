@@ -30,55 +30,32 @@ if (localBoardData !== null) {
 
 
 team1Plus1Btn.addEventListener('click', () => {
-    boardData.push({
-        team: 'Team 1',
-        points: 1,
-        scoreTime: Date.now(),
-    })
+    pushData('Team 1', 1);
     pointCount();
     scoreHistory();
 });
 team1Plus2Btn.addEventListener('click', () => {
-    boardData.push({
-        team: 'Team 1',
-        points: 2,
-        scoreTime: Date.now(),
-    })
-    pointCount(); scoreHistory();
+    pushData('Team 1', 2);
+    pointCount();
+    scoreHistory();
 });
 team1Plus3Btn.addEventListener('click', () => {
-    boardData.push({
-        team: 'Team 1',
-        points: 3,
-        scoreTime: Date.now(),
-    })
+    pushData('Team 1', 3);
     pointCount();
     scoreHistory();
 })
 team2Plus1Btn.addEventListener('click', () => {
-    boardData.push({
-        team: 'Team 2',
-        points: 1,
-        scoreTime: Date.now(),
-    })
+    pushData('Team 2', 1);
     pointCount();
     scoreHistory();
 });
 team2Plus2Btn.addEventListener('click', () => {
-    boardData.push({
-        team: 'Team 2',
-        points: 2,
-        scoreTime: Date.now(),
-    })
+    pushData('Team 2', 2);
     pointCount();
     scoreHistory();
 });
 team2Plus3Btn.addEventListener('click', () => {
-    boardData.push({
-        team: 'Team 2',
-        points: 3,
-        scoreTime: Date.now(),
-    })
+    pushData('Team 2', 3);
     pointCount();
     scoreHistory();
 });
@@ -117,7 +94,6 @@ function scoreHistory() {
             localStorage.setItem('data', JSON.stringify(boardData));
             pointCount();
             scoreHistory();
-            console.log(deleteButton);
         })
     }
 
@@ -132,4 +108,12 @@ function formatTime(timeInMs) {
     let mili = now.getMilliseconds();
 
     return `${hours}h : ${minutes}min, ${seconds}sec ${mili}ms.`
+}
+
+function pushData(teamName, points) {
+    boardData.push({
+        team: teamName,
+        points: points,
+        scoreTime: Date.now(),
+    });
 }
