@@ -1,0 +1,64 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+        sans-serif;
+    background-color: papayawhip;
+    padding: 2rem;
+
+}
+header {
+    margin-bottom: 2rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+main > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+div > div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+button{
+    padding: 10px 20px;
+    width: 85px;
+    font-weight: bold;
+    border-radius: 10px;
+    
+}
+button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.log{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+}
+p{
+    font-size: 20px;
+}
